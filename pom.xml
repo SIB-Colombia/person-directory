@@ -11,7 +11,7 @@
     <groupId>org.jasig.service.persondir</groupId>
     <artifactId>person-directory-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.7.0</version>
+    <version>1.7.0-sib</version>
     
     <scm>
         <connection>scm:git:git://github.com/Jasig/person-directory.git</connection>
@@ -468,6 +468,19 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Internal Releases</name>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-releases</id>
+            <name>Internal Snapshot Releases</name>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <profiles>
         <!-- 
          | Used by the continuous integrations server to deploy the project site.
@@ -494,5 +507,19 @@
                 </site>
             </distributionManagement>
         </profile>
+
+        <!-- 
+         | SIB Colombia maven repository
+         +-->
+        <profile>
+            <id>sibcolombia</id>
+            <distributionManagement>
+                <site>
+                    <id>sib</id>
+                    <name>Internal Releases</name>
+                    <url>http://localhost:8081/repository/maven-releases/</url>
+                </site>
+            </distributionManagement>
+        </profile>        
     </profiles>
 </project>

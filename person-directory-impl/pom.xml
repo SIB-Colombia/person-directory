@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.jasig.service.persondir</groupId>
         <artifactId>person-directory-parent</artifactId>
-        <version>1.7.0</version>
+        <version>1.7.0-sib</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -112,6 +112,11 @@
             <artifactId>slf4j-api</artifactId>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>${mongodb.version}</version>
+        </dependency>
         <!--========== Runtime Dependencies ==========-->
 
         
@@ -197,4 +202,8 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
+    
+    <properties>
+        <mongodb.version>3.0.4</mongodb.version>
+    </properties>
 </project>
