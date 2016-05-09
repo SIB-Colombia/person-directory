@@ -209,6 +209,6 @@
     </dependencies>
     
     <properties>
-        <mongodb.version>3.0.4</mongodb.version>
+        <mongodb.version>3.2.2</mongodb.version>
     </properties>
 </project>
